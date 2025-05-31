@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7edff;
+}
+
+.btns {
+  margin: 50px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#box {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.toast {
+  width: 400px;
+  height: 80px;
+  background-color: #fff;
+  margin: 15px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  position: relative;
+  animation: anim2 0.5s linear forwards;
+  transform: translateX(100%);
+}
+
+i {
+  margin: 0 20px;
+  color: green;
+}
+
+.error i {
+  color: red;
+}
+
+.again i {
+  color: orange;
+}
+
+.toast::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: green;
+  animation: anim 6s linear forwards;
+}
+
+.error::after {
+  background-color: red;
+}
+
+.again::after {
+  background-color: orange;
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes anim2 {
+  100% {
+    transform: translateX(0);
+  }
+}
